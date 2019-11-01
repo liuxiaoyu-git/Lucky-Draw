@@ -24,10 +24,10 @@ $row = mysqli_fetch_assoc($rs);
 $winner_row=rand(1,$row['count']); 
 
 $sql = "select username from TEMPLUCKYDRAW where rowno='".$winner_row."';
-echo $sql."<br/>";
+echo $sql;
 $rs = $connection->query($sql);
 $row = mysqli_fetch_assoc($rs);
-echo $row['username']."<br/>"; 
+echo $row['username']; 
 
 //$sql = "create table TEMPLUCKYDRAW as select (@rowno:= @rowno+1) AS rowno, username from registryuser, (SELECT @rowno:=0) as rowno where username not in (select username from winner)";
 //$sql = "drop table TEMPLUCKYDRAW";

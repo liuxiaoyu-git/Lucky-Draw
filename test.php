@@ -11,7 +11,7 @@ $rs=$connection->query($sql);
 $result = array();
 
 while($row = mysqli_fetch_array($rs)) 
-    print_r($row);
+    echo $row;
     $result[]=$row;
 }
 mysqli_close($connection);

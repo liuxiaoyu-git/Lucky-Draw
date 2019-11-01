@@ -8,15 +8,13 @@ $connection = mysqli_connect($dbhost.":".$dbport, $dbuser, $dbpwd, $dbname) or d
 
 $sql = "select username from registryuser where username not in (select username from winner)";
 $rs = mysql_query($sql);
-//$result = array();
+$result = array();
 
 while($row = mysql_fetch_array($rs))
     echo $row[0]."<br/>"; 
-    //$result[]=$row;
+    $result[]=$row;
 
 mysql_free_result($rs);
 mysqli_close($connection);
 
-echo "<br/>查询结果在下面的额为数组里面:<pre>";
-//print_r($result);
-echo "</pre>";
+echo "<br/>查询结果在下面的额为数组里面";

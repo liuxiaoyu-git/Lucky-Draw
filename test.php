@@ -11,11 +11,11 @@ $rs = $connection->query($sql);
 //$result = array();
 
 while($row = mysqli_fetch_assoc($rs)) {
-    echo $row['username'];
+    echo $row['username']."<br/>";
     //$result[]=$row;
 }
 mysqli_close($connection);
 
-echo '查询结果在下面的额为数组里面:<pre>';
+echo "<br/>查询结果在下面的额为数组里面:<pre>";
 //print_r($result);
-echo '</pre>';
+echo "</pre>";

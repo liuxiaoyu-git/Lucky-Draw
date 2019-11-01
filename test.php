@@ -12,5 +12,4 @@ $rs = $connection->query($sql);
 while($row = mysqli_fetch_assoc($rs))
     echo $row[0]."<br/>"; 
 
-mysql_free_result($rs);
 mysqli_close($connection);

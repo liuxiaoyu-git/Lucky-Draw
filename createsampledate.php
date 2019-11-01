@@ -13,7 +13,7 @@ for ($i=1; $i<=10; $i++){
   } 
 }
 
-$sql = "insert into winner values('user3-0003','special prize')";
+$sql = "insert into winner values('user3-0001','special prize')";
 if ($connection->query($sql) !== TRUE) {  
     echo "发生数据库操作错误";  
 } 

@@ -9,7 +9,7 @@ $connection = mysqli_connect($dbhost.":".$dbport, $dbuser, $dbpwd, $dbname) or d
 $sql = "select username from registryuser where username not in (select username from winner)";
 $rs = $connection->query($sql);
 
-while($row = mysql_fetch_array($rs))
+while($row = mysqli_fetch_assoc($rs))
     echo $row[0]."<br/>"; 
 
 mysql_free_result($rs);

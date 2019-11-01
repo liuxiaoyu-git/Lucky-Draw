@@ -10,7 +10,7 @@ $sql='select username from registryuser where username not in (select username f
 $rs=$connection->query($sql);
 $result = array();
 
-while($row=mysql_fetch_array($rs)) 
+while($row = mysqli_fetch_array($result，$MYSQLI_ASSOC)) 
     $result[]=$row;
 }
 mysqli_close($connection);

@@ -7,7 +7,7 @@ $dbpwd = getenv("DATABASE_PASSWORD"); #password
 $connection = mysqli_connect($dbhost.":".$dbport, $dbuser, $dbpwd, $dbname) or die("Error " . mysqli_error($connection));
 
 $sql = "select username from registryuser where username not in (select username from winner)";
-$rs = mysql_query($sql);
+$rs = $connection->query($sql);
 
 while($row = mysql_fetch_array($rs))
     echo $row[0]."<br/>"; 

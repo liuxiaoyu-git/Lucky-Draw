@@ -7,13 +7,13 @@ $dbpwd = getenv("DATABASE_PASSWORD"); #password
 $connection = mysqli_connect($dbhost.":".$dbport, $dbuser, $dbpwd, $dbname) or die("Error " . mysqli_error($connection));
 
 $sql='select username from registryuser where username not in (select username from winner)';
-if ($res=mysql_query($sql)){
-    while($row=mysql_fetch_array($res)) 
-      $result[]=$row;
-    mysql_free_resule($res);
+$rs=$connection->query($sql);
+$result = array();
+
+while($row=mysql_fetch_array($rs)) 
+    $result[]=$row;
 }
-else 
-  echo "执行SQL语句:$sql\n错误：".mysql_error();
+mysqli_close($connection);
 
 echo '查询结果在下面的额为数组里面:<pre>';
 print_r($result);

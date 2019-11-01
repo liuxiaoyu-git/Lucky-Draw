@@ -15,15 +15,15 @@
                   3）重置抽奖应用（清除所有注册抽奖的用户）
                   </a>
                   <br/>
-                  <a href="sample.php">
+                  <a href="createsampledate.php">
                   4）生成模拟数据
                   </a>
                   <br/>
-                  <a href="test.php">
+                  <a href="test.php">    
                   5）功能测试
                   </a>
-				      </td>
-			    </tr>
+		</td>
+	    </tr>
         </table>
     </body>
 </html>

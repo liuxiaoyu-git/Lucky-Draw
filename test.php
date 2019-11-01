@@ -16,5 +16,3 @@ while($row = mysql_fetch_array($rs))
 
 mysql_free_result($rs);
 mysqli_close($connection);
-
-echo "<br/>查询结果在下面的额为数组里面";

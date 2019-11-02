@@ -27,10 +27,10 @@ echo "winner_no";
 echo $winner_no;
 $sql = "select username from TEMPLUCKYDRAW where rowno='".$winner_no."';
 echo $sql;
+/*
 $rs = $connection->query($sql);
 $row = mysqli_fetch_assoc($rs);
 echo $row['username']; 
-/*
 //$sql = "create table TEMPLUCKYDRAW as select (@rowno:= @rowno+1) AS rowno, username from registryuser, (SELECT @rowno:=0) as rowno where username not in (select username from winner)";
 //$sql = "drop table TEMPLUCKYDRAW";
 //$sql = "select (@rowno:= @rowno+1) AS rowno, username from registryuser, (SELECT @rowno:=0) as rowno where username not in (select username from winner) and rowno=".$num_winner;

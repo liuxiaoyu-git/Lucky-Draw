@@ -26,10 +26,10 @@ echo $count;
 $winner_no=rand(1,$count); 
 echo "winner_no";
 echo $winner_no;
-/*
-$sql = "select username from TEMPLUCKYDRAW where rowno='".$winner_no."';
-echo $sql;
 
+$sql = "select username from TEMPLUCKYDRAW where rowno=".$winner_no;
+echo $sql;
+/*
 $rs = $connection->query($sql);
 $row = mysqli_fetch_assoc($rs);
 echo $row['username']; 

@@ -19,12 +19,14 @@ $sql = "select count(*) as count from TEMPLUCKYDRAW";
 $rs = $connection->query($sql);
 $row = mysqli_fetch_assoc($rs);
 $count = $row['count'];
+echo $count;
 //$num_rows = mysql_num_rows($rs);
-/*
+
 //抽奖，随机产生中奖号
 $winner_no=rand(1,$count); 
 echo "winner_no";
 echo $winner_no;
+/*
 $sql = "select username from TEMPLUCKYDRAW where rowno='".$winner_no."';
 echo $sql;
 

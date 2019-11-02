@@ -19,27 +19,12 @@ $sql = "select count(*) as count from TEMPLUCKYDRAW";
 $rs = $connection->query($sql);
 $row = mysqli_fetch_assoc($rs);
 $count = $row['count'];
-echo $count;
-//$num_rows = mysql_num_rows($rs);
 
 //抽奖，随机产生中奖号
 $winner_row=rand(1,$count); 
-echo "winner_row";
-echo $winner_row;
-
 $sql = "select username from TEMPLUCKYDRAW where sn=".$winner_row;
-echo $sql;
-
 $rs = $connection->query($sql);
 $row = mysqli_fetch_assoc($rs);
 echo $row['username']; 
-/*
-//$sql = "create table TEMPLUCKYDRAW as select (@rowno:= @rowno+1) AS rowno, username from registryuser, (SELECT @rowno:=0) as rowno where username not in (select username from winner)";
-//$sql = "drop table TEMPLUCKYDRAW";
-//$sql = "select (@rowno:= @rowno+1) AS rowno, username from registryuser, (SELECT @rowno:=0) as rowno where username not in (select username from winner) and rowno=".$num_winner;
 
-
-//while($row = mysqli_fetch_assoc($rs))
-//   echo $row['username']."<br/>"; 
-*/
 mysqli_close($connection);

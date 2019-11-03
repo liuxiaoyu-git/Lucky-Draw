@@ -43,9 +43,8 @@ function startrun() {
 <body>
 
 <div id="showname">-----</div>
-<form >
+<form action=luckdraw_result.php method=post>
 <input type="hidden" id="winner" name="winner" value="-----" />
-
 <input type="button" value="开始" onclick="startrun();" />
 <input type="submit" value="停止" />
 </form>

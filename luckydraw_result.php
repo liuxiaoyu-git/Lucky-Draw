@@ -9,8 +9,10 @@ $winner=$_POST['winner'];
 $round=$_POST['round'];
 
 $sql = "insert into winner values('".$winner."','".$round."')";
+$sql1="insert into winner values('user1-0001','thirdprize')";
 echo $sql;
-$connection->query("insert into winner values('user1-0001','thirdprize')");
+echo $sql==$sql1;
+$connection->query($sql1);
 mysqli_close($connection);
-echo "恭喜 ".$winner." 中奖";
+echo "恭喜 ".$winner." 中奖了";
 ?>

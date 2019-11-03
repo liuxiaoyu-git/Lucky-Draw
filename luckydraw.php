@@ -34,7 +34,8 @@ function startrun() {
 <style type="text/css">
 #showname  {
     border: 3px solid #006;
-    width: 300px;
+    clolr: #FF0000;
+    width: 400px;
     font-size: 40px;
     text-align: center;
 }
@@ -43,7 +44,7 @@ function startrun() {
 <body>
 
 <div id="showname">-----</div>
-<form action=luckdraw_result.php method=post>
+<form action=luckydraw_result.php method=post>
 <input type="hidden" id="winner" name="winner" value="-----" />
 <input type="button" value="开始" onclick="startrun();" />
 <input type="submit" value="停止" />

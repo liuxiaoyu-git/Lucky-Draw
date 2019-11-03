@@ -22,7 +22,7 @@ echo "<br/>5:";
 echo ($sql===$sql1);
 echo "<br/>6:";
 echo strcmp($sql,$sql1);
-$connection->query($sql1);
+$connection->query($sql);
 mysqli_close($connection);
 echo "恭喜 ".$winner." 中奖了";
 ?>

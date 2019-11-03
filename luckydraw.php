@@ -7,7 +7,8 @@ $dbpwd = getenv("DATABASE_PASSWORD"); #password
 $namelist = "";
 $sql = "select username from registryuser where username not in (select username from winner)";
 $connection = mysqli_connect($dbhost.":".$dbport, $dbuser, $dbpwd, $dbname) or die("Error " . mysqli_error($connection));
-
+echo mysql_query($sql);
+/*
 if ($rs=mysql_query($sql)){
     //while($row=mysqli_fetch_assoc($rs)) 
 	//	$namelist=$namelist."'".$row['username']."',";
@@ -16,6 +17,7 @@ if ($rs=mysql_query($sql)){
 }
 else 
 	echo "执行SQL语句:$sql\n错误：".mysql_error();
+*/
 mysqli_close($connection);
 ?>
 <script type="text/javascript">

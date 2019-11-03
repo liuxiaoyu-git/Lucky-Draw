@@ -9,19 +9,20 @@ $sql = "select username from registryuser where username not in (select username
 $connection = mysqli_connect($dbhost.":".$dbport, $dbuser, $dbpwd, $dbname) or die("Error " . mysqli_error($connection));
 
 if ($rs=mysql_query($sql)){
-    while($row=mysqli_fetch_assoc($rs)) 
-		$namelist=$namelist."'".$row['username']."',";
-    $namelist=substr($namelist,0,strlen($namelist)-1);
-	mysql_free_resule($res);
+    //while($row=mysqli_fetch_assoc($rs)) 
+	//	$namelist=$namelist."'".$row['username']."',";
+	//$namelist=substr($namelist,0,strlen($namelist)-1);
+	//mysql_free_resule($res);
 }
 else 
 	echo "执行SQL语句:$sql\n错误：".mysql_error();
 mysqli_close($connection);
 ?>
 <script type="text/javascript">
-var namelist = [<?=$namelist?>];
+//var namelist = [<?=$namelist?>];
+var namelist = ["liuxioayu","baoli"];
+
 function startrun() {
-    //clearInterval(timer);
     var index;
     setInterval(function(){
         index = Math.floor(Math.random()*namelist.length);

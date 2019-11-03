@@ -7,7 +7,7 @@ $dbpwd = getenv("DATABASE_PASSWORD"); #password
 $username = $_POST['username'];
 $code = $_POST['code'];
 $connection = mysqli_connect($dbhost.":".$dbport, $dbuser, $dbpwd, $dbname) or die("Error " . mysqli_error($connection));
-$sql = "insert into registryuser values('".$registryuser."','".$code."')";
+$sql = "insert into registryuser values('".$username."','".$code."')";
 echo $sql;
 if ($connection->query($sql) !== TRUE) {  
 	echo "发生数据库操作错误或用户".$username."已经存在";

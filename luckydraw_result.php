@@ -8,8 +8,7 @@ $connection = mysqli_connect($dbhost.":".$dbport, $dbuser, $dbpwd, $dbname) or d
 $winner=$_POST['winner']; 
 $round=$_POST['round'];
 
-//将可以抽奖的人员复制到抽奖表
-$sql = "insert into winner values('".$winner."','".$winner."')";
+$sql = "insert into winner values('".$winner."','".$round."')";
 echo $sql;
 $connection->query($sql);'
 mysqli_close($connection);

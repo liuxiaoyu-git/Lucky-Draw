@@ -10,6 +10,6 @@ $round=$_POST['round'];
 
 $sql = "insert into winner values('".$winner."','".$round."')";
 echo $sql;
-$connection->query($sql);'
+//$connection->query($sql);'
 mysqli_close($connection);
 ?>

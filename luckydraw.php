@@ -44,9 +44,9 @@ function startrun() {
 <form action=luckydraw_result.php method=post>
 <select name="round">
   <option value="specialprize">特等奖</option>
-  <option value="firstprize">一等奖</option>
-  <option value="secondprize">二等奖</option>
-  <option value="thirdprize" selected="selected">三等奖</option>
+  <option value="1prize">一等奖</option>
+  <option value="2prize">二等奖</option>
+  <option value="3prize" selected="selected">三等奖</option>
 </select>
 <input type="hidden" id="winner" name="winner" value="-----" />
 <input type="button" value="开始" onclick="startrun();" />

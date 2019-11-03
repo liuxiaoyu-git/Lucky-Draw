@@ -43,10 +43,10 @@ function startrun() {
 <div id="showname">-----</div>
 <form action=luckydraw_result.php method=post>
 <select name="round">
-  <option value="specialprize">特等奖</option>
-  <option value="firstprize">一等奖</option>
-  <option value="secondprize">二等奖</option>
-  <option value="thirdprize" selected="selected">三等奖</option>
+  <option value="特等奖">特等奖</option>
+  <option value="一等奖">一等奖</option>
+  <option value="二等奖">二等奖</option>
+  <option value="三等奖" selected="selected">三等奖</option>
 </select>
 <input type="hidden" id="winner" name="winner" value="-----" />
 <input type="button" value="开始" onclick="startrun();" />

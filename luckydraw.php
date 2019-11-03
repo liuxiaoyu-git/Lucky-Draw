@@ -10,7 +10,7 @@ $connection = mysqli_connect($dbhost.":".$dbport, $dbuser, $dbpwd, $dbname) or d
 
 if ($rs=mysql_query($sql)){
     while($row=mysql_fetch_array($rs)) 
-		$namelist=$namelist."'".$rowp['username']."',";
+		$namelist=$namelist."'".$row['username']."',";
     $namelist=substr($namelist,0,strlen($namelist)-1);
 	mysql_free_resule($res);
 }

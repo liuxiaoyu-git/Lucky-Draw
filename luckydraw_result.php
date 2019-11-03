@@ -8,7 +8,7 @@ $connection = mysqli_connect($dbhost.":".$dbport, $dbuser, $dbpwd, $dbname) or d
 $winner=$_POST['winner']; 
 $round=$_POST['round'];
 
-$sql = "insert into winner values(\'".$winner."\',\'".$round."\')";
+$sql = "insert into winner values('".$winner."','".$round."')";
 echo $sql;
 //$connection->query($sql);'
 mysqli_close($connection);

@@ -8,8 +8,8 @@ $namelist = "";
 $sql = "select username from registryuser where username not in (select username from winner)";
 $connection = mysqli_connect($dbhost.":".$dbport, $dbuser, $dbpwd, $dbname) or die("Error " . mysqli_error($connection));
 $rs=$connection->query($sql);
-while($row=mysqli_fetch_assoc($rs)) 
-	$namelist=$namelist."'".$row['username']."',";
+while($row = mysqli_fetch_assoc($rs))
+	$namelist .= "'".$row['username']."',";
 $namelist=substr($namelist,0,strlen($namelist)-1);
 
 echo $namelist;

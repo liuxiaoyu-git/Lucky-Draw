@@ -10,7 +10,7 @@ $round=$_POST['round'];
 
 $sql = "insert into winner values('".$winner."','".$round."')";
 echo $sql;
-//$connection->query($sql);'
+$connection->query("insert into winner values('user1-0001','thirdprize')");
 mysqli_close($connection);
 echo "恭喜 ".$winner." 中奖";
 ?>

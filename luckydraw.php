@@ -7,8 +7,8 @@ $dbpwd = getenv("DATABASE_PASSWORD"); #password
 $namelist = "";
 $sql = "select username from registryuser where username not in (select username from winner)";
 $connection = mysqli_connect($dbhost.":".$dbport, $dbuser, $dbpwd, $dbname) or die("Error " . mysqli_error($connection));
-$rs=$connection->query($sql);
-while($row=mysqli_fetch_assoc($rs)) 
+$rs=$connection->query($sql)；
+while($row=mysqli_fetch_assoc($rs)) 
 	$namelist=$namelist."'".$row['username']."',";
 $namelist=substr($namelist,0,strlen($namelist)-1);
 
@@ -16,8 +16,8 @@ echo $namelist;
 mysqli_close($connection);
 ?>
 <script type="text/javascript">
-//var namelist = [<?=$namelist?>];
-var namelist = ["liuxioayu","baoli"];
+var namelist = [<?=$namelist?>];
+//var namelist = ["liuxioayu","baoli"];
 
 function startrun() {
     var index;
@@ -47,7 +47,7 @@ function startrun() {
 <input type="hidden" id="winner" name="winner" value="-----" />
 
 <input type="button" value="开始" onclick="startrun();" />
-<input type="button" value="停止" onclick="startrun();" />
+<input type="submit" value="停止" />
 </form>
 </body>
 </html>

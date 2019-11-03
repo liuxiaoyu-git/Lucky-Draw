@@ -11,8 +11,6 @@ $rs=$connection->query($sql);
 while($row = mysqli_fetch_assoc($rs))
 	$namelist .= "'".$row['username']."',";
 $namelist=substr($namelist,0,strlen($namelist)-1);
-
-echo $namelist;
 mysqli_close($connection);
 ?>
 <script type="text/javascript">
@@ -42,7 +40,6 @@ function startrun() {
 </style>
 </head>
 <body>
-
 <div id="showname">-----</div>
 <form action=luckydraw_result.php method=post>
 <select name="round">
